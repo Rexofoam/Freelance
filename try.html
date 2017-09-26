@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    <!-- @user: Jonathan Foong
+         HTML5, CSS, JavaScript, JQuery, Bootstrap for NOOBS-->
+		<title>CRRJ | Portfolio</title>
+        <link rel="stylesheet" href="style.css"/>
+        <nav>
+            <ul>
+                <!--Link to id ="Home"-->
+                <li><a href="#Home">Home</a></li>
+                <!--Link to id ="About"-->
+                <li><a href="#About">About</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Projects</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+	</head>
+	<body>
+        
+    <!--Top most home page-->
+        <div id="Home" class="background">
+            <div class="content">         
+                <img src="image/Logo.png" style="width: 325px;height: 150px;">
+                <p>Software Engineer . Web Developer</p> 
+                <br>
+                <p>Programmer</p>
+            </div>
+        </div>
+        <!--Section 2 from top-->
+        <div class="sec">
+            <img id="About" src="image/Logo2.png" style="width: 36%;height: 115px;
+                                        margin-top: 10px;margin-left: 33%;">
+            <!--text goes here-->
+                <br><br>
+                <p>We are a group of <b>Software Engineering </b>students from Taylor’s University,</p> 
+                <p>looking to enhance our skills in related IT fields.</p>
+                <br><br>
+                <p>In doing so, we grouped up and decided to take on freelance IT projects to hone our skills.</p>
+                <p>In the meantime, do look through our team's website</p>
+                <p>For more information, feel free to contact us</p>
+                <br><br>
+            <!-- CRRJ logo-->
+            <img src="image/Logo3.png" style="width: 25%;height: 75px;
+                                        margin-top: 15px;margin-left: 38%;">
+        </div>
+        <!--random background...test-->
+        <div class="background2"></div>
+
+        <!--JavaScript section only-->
+        <!--If scroll top is null apply class hidden to nav bar
+            else remove class hidden-->
+	<script src="jquery-3.2.1.min.js"></script>
+	<script type="text/javascript">
+			
+			(function() {
+                
+                var documentElem = $(document),
+                    nav = $('nav'),
+                    lastScrollTop = 0;
+                
+                documentElem.on('scroll', function() {
+                    var currentScrollTop = $(this).scrollTop();
+                    
+                    if ( currentScrollTop > lastScrollTop ) nav.addClass('hidden');
+                   
+                    else nav.removeClass('hidden');
+                    
+                    lastScrollTop = currentScrollTop;
+                });
+                
+                
+                
+            })();
+	</script>
+    </body>
+</html>
